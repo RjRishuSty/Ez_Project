@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import Styles from "./EmailForm.module.css";
 import { enqueueSnackbar } from "notistack";
-import axios from 'axios';
+import axios from "axios";
 
 const EmailForm = () => {
   const [formData, setFormData] = useState({ email: "" });
@@ -25,25 +25,26 @@ const EmailForm = () => {
     }
     return true;
   };
-  const handlerSubmitWithApi = async()=>{
-    try{
-      const response = await axios.post(`http://3.228.97.110:9000/api`, {email:formData.email});
-      if(response.status === 200){
-        enqueueSnackbar('Form Submitted!',{variant:'success'});
-      }
-    }catch(error){
-      if(error.response && error.response.status === 422){
-        enqueueSnackbar("Form not submitted! Somethings went wrong!",{variant:'error'})
-      }
-      console.log(error);
-    }
-  }
-  const handleSubmit = (e) => {
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (validation()) {
-      handlerSubmitWithApi()
+      try {
+        const response = await axios.post("http://3.228.97.110:9000/api", {
+          email: formData.email,
+        });
+  
+        if (response.status === 200) {
+          enqueueSnackbar("Form Submitted!", { variant: "success" });
+          setFormData({ email: "" });
+        }
+      } catch (error) {
+        console.log(error)
+          enqueueSnackbar(error.message, { variant: "error" });
+      }
     }
   };
+  
 
   return (
     <form onSubmit={handleSubmit} className={Styles.form}>
@@ -52,6 +53,7 @@ const EmailForm = () => {
         id="email"
         placeholder="Email Address"
         required
+        value={formData.email}
         className={Styles.input}
         ref={inputRef}
         onChange={handleChange}

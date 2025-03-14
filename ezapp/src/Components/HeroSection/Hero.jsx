@@ -18,7 +18,6 @@ const Hero = () => {
         window.addEventListener('resize', handleResize);
         return ()=> window.removeEventListener('resize', handleResize)
     },[width,isMobile])
-    console.log(width)
   return (
     <section className={Styles.heroSection}>
       <div className={Styles.logowithForm}>
@@ -33,7 +32,7 @@ const Hero = () => {
       </div>
       <div className={Styles.services}>
         {cardsData.map((item) => (
-          <Cards item={item} />
+          <Cards key={item.id} item={item} />
         ))}
       </div>
       {

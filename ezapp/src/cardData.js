@@ -27,21 +27,21 @@ export const cardsData = [
     icon: img4,
   },
   {
-    id: 3,
+    id: 4,
     title: "Graphic Design",
     description:
       "Lorem ipsum dolor sit amet, lorem dolor sit amet, Lorem ipsum dolor sit amet.",
     icon: img3,
   },
   {
-    id: 4,
+    id: 5,
     title: "Research & Analytics",
     description:
       "Lorem ipsum dolor sit amet, lorem dolor sit amet, Lorem ipsum dolor sit amet.",
     icon: img2,
   },
   {
-    id: 5,
+    id: 6,
     title: "Data Processing",
     description:
       "Lorem ipsum dolor sit amet, lorem dolor sit amet, Lorem ipsum dolor sit amet.",
