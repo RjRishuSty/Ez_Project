@@ -49,7 +49,7 @@ const EmailForm = () => {
         setErrorMsg({ error: "Form submitted.", color: "green" });
         setFormData({ email: "" });
       } else if (response.status === 422) {
-        setErrorMsg({ error: data.message, color: "red" });
+        setErrorMsg({ error: "Emails ending with @ez.works are not allowed", color: "red" });
       } else {
         setErrorMsg({ error: "Something went wrong.", color: "red" });
       }

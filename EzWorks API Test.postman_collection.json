@@ -43,6 +43,44 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "Unprocessable Entity (422)",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/ecmascript",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"dsfd@ez.works\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://test.ezworks.ai/api",
+					"protocol": "https",
+					"host": [
+						"test",
+						"ezworks",
+						"ai"
+					],
+					"path": [
+						"api"
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }
