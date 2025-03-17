@@ -11,7 +11,7 @@ const Cards = ({ item }) => {
         <h4 className={Styles.title}>{title}</h4>
       </div>
       <p className={Styles.description}>{description}</p>
-    </div>
+    </div> 
   );
 };
 

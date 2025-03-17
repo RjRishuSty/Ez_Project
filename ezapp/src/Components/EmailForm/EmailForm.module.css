@@ -3,8 +3,12 @@
   width: 100%;
   height: auto;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: start;
+  align-items: start;
+}
+.inputGroup {
+  width: 70%;
+  margin-right: 10px;
 }
 .input {
   border: 1px solid #ababab;
@@ -12,7 +16,6 @@
   height: auto;
   padding: 15px;
   color: #2d2d2d;
-  margin: 0px 10px 0px 0px;
   font-size: 25px;
   font-weight: 500;
   letter-spacing: 0.5px;
@@ -22,13 +25,19 @@
   font-size: 20px;
   color: #ababab;
 }
+.errorMsg {
+  font-size: 0.9rem;
+  font-weight: 600;
+  align-self: flex-start; 
+  margin: 5px 0px 5px 5px; 
+}
 .btn {
-  width: 250px;
+  width: 30%;
   height: auto;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 600;
   color: white;
-  padding: 15px 20px;
+  padding: 20px;
   border: 1px solid #ea7b2c;
   border-radius: 5px;
   background-color: #ea7b2c;
@@ -36,57 +45,49 @@
   text-transform: capitalize;
 }
 
-@media (max-width: 1400px) {
+@media (max-width: 1165px) {
+  .inputGroup {
+    width: 65%;
+    margin-right: 5px;
+  }
   .input {
-    width: 70%;
+    width: 100%;
     font-size: 18px;
   }
   .input::placeholder {
     font-size: 16px;
   }
   .btn {
-    width: auto;
-    height: auto;
-    font-size: 1.1rem;
-    padding: 18px 10px;
-  }
-}
-
-@media (max-width: 1104px) {
-  .form{
-    display: flex;
-    justify-content: start;
-    align-items: start;
-  }
-  .input {
-    width: 60%;
-    font-size: 18px;
-  }
-  .input::placeholder {
-    font-size: 16px;
-  }
-  .btn {
-    width: auto;
+    width: 35%;
     height: auto;
     font-size: 1rem;
     padding: 15px;
   }
 }
-@media (max-width:900px) {
-  .form{
-    justify-content: center;
-    align-items: center;
+@media (max-width: 900px) {
+  .form {
+    padding: 10px;
   }
 }
 @media (max-width: 557px) {
   .form {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .inputGroup {
+    width: 100%;
+    margin: 10px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
   }
   .input {
-    width: 90%;
+    width: 100%;
     padding: 15px;
     font-size: 1rem;
-    margin: 15px;
   }
   .input::placeholder {
     font-size: 16px;
@@ -95,6 +96,12 @@
     width: auto;
     height: auto;
     font-size: 1.1rem;
-    padding: 10px 20px;
+    padding: 15px 20px;
+  }
+  .errorMsg {
+    font-size: 0.9rem;
+    font-weight: 600;
+    align-self: flex-start; 
+    margin: 5px 0px 5px 5px; 
   }
 }

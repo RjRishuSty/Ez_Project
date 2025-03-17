@@ -1,74 +1,83 @@
-.heroSection{
+.heroSection {
+  width: 100%;
+  height: auto;
+  padding: 15px 0px 15px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logowithForm {
+  width: 45%;
+  height: auto;
+  padding: 10px;
+}
+.logoImg {
+  width: auto;
+  height: auto;
+  margin: 20px 0px 30px 0px;
+  filter: brightness(90%);
+  cursor: pointer;
+}
+.title {
+  color: #112949;
+  font-size: 30px;
+  text-align: start;
+  font-weight: 700;
+  margin: 10px 0px;
+  text-transform: capitalize;
+}
+.description {
+  width: 100%;
+  font-size: 18px;
+  color: #112949;
+  text-align: start;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  line-height: 25px;
+  padding: 0px 10px 0px 0px;
+}
+
+.services {
+  width: 55%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 1267px) {
+  .title {
+    font-size: 25px;
+  }
+  .description {
+    font-size: 17px;
+  }
+}
+@media (max-width: 900px) {
+  .heroSection {
+    width: 100%;
+    padding: 50px 0px;
+  }
+  .logowithForm {
+    width: 100%;
+  }
+  .services {
     width: 100%;
     height: auto;
-    padding: 15px 0px 15px 15px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-
+    padding: 0px;
+    margin-top: 20px;
+  }
 }
 
-.logowithForm{
-    width: 42%;
-    height: auto;
-    padding: 10px;
-}
-.logoImg{
-    width: auto;
-    height: auto;
-    margin: 20px 0px 30px 0px;
-    filter: brightness(90%);
-    cursor: pointer;
-}
-.title{
-    color: #112949;
-    font-size: 30px;
-    text-align: start;
-    font-weight: 700;
-    margin: 10px 0px;
-    text-transform: capitalize;
-}
-.description{
-    width: 100%;
-    font-size: 18px;
-    color: #112949;
-    text-align: start;
-    font-weight: 500;
-    letter-spacing: 0.5px;
-    line-height: 25px;
-    padding: 0px 10px 0px 0px;
-}
-
-.services{
-    width: 55%;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-@media (max-width:1267px) {
-    .title{
-        font-size: 25px;
-    }
-    .description{
-        font-size: 17px;
-    }
-}
-@media (max-width:900px) {
-    .heroSection{
-        width: 100%;
-        padding: 50px 0px;
-    }
-    .logowithForm{
-        width: 100%;
-    }
-    .services{
-        width: 100%;
+@media (max-width:247px) {
+    .logoImg {
+        width: 80%;
         height: auto;
-        padding: 0px;
-        margin-top: 20px;
-    }
+        margin: 20px 0px 30px 0px;
+        filter: brightness(90%);
+        cursor: pointer;
+      }
 }

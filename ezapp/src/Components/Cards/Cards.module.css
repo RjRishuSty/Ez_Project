@@ -8,12 +8,15 @@
   overflow: hidden;
   cursor: pointer;
 }
+.card:hover{
+  filter: brightness(80%);
+}
 .iconWithTitle {
   width: 100%;
   height: auto;
   display: flex;
   justify-content: start;
-  align-items: start;
+  align-items: center;
 }
 .img {
   width: 58px;
@@ -62,6 +65,31 @@
   .card {
     width: 220px;
     margin: 10px;
+  } 
+  .iconWithTitle {
+    align-items: center;
+  }
+  .img {
+    width: 58px;
+    height: 58px;
+    padding: 7px 7px 7px 0px;
+    margin-right: 7px;
+  }
+  .title {
+    color: #3cc3f2;
+    font-size: 18px;
+    line-height: 23px;
+    font-weight: 600;
+  }
+  .description {
+    margin: 17px 0px 0px 0px;
+    font-size: 16px;
+    color: #ffffff;
+    text-align: start;
+    line-height: 22px;
+    letter-spacing: 0.6px;
+    font-weight: 500;
+    filter: brightness(90%);
   }
 }
 
